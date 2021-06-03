@@ -1,0 +1,34 @@
+.custom-menu-dropdown {
+    width: 100vw;
+    height: 200px;
+    display: none;
+}
+
+#custom-menu-dropdown-1 {
+    background-color: lightblue;
+}
+
+#custom-menu-dropdown-2 {
+    background-color: lightcoral;
+}
+
+#custom-menu-dropdown-3 {
+    background-color: lightgoldenrodyellow;
+}
+
+.triggerzone {
+    width: 100vw;
+    height: 200px;
+    background-color: lightgrey;
+    display: none;
+}
+.custom-dropdown-menu-werknemers,
+.custom-dropdown-menu-werkgevers,
+.custom-dropdown-menu-gepensioneerden,
+.custom-dropdown-menu-onze-organisatie {
+    display: none;
+}
+
+.show {
+    display: block;
+}

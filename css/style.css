@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+html {
+  font-size: 100%;
+  /* font-size: 62.5%;  */
+  /* 1rem = 10px, 10px/16px = 62,5% */ }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  font-family: "Open Sans", sans-serif; }
+
+#show-content-button {
+  padding: 10px; }
+
+#custom-dropdown-menu {
+  display: none; }
+  #custom-dropdown-menu.show {
+    display: block; }
+
+.custom-menu-dropdown {
+  width: 100vw;
+  height: 200px;
+  display: none; }
+
+#custom-menu-dropdown-1 {
+  background-color: lightblue; }
+
+#custom-menu-dropdown-2 {
+  background-color: lightcoral; }
+
+#custom-menu-dropdown-3 {
+  background-color: lightgoldenrodyellow; }
+
+.triggerzone {
+  width: 100vw;
+  height: 200px;
+  background-color: lightgrey;
+  display: none; }
+
+.custom-dropdown-menu-werknemers,
+.custom-dropdown-menu-werkgevers,
+.custom-dropdown-menu-gepensioneerden,
+.custom-dropdown-menu-onze-organisatie {
+  display: none; }
+
+.show {
+  display: block; }
