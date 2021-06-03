@@ -1,12 +1,12 @@
+'use strict';
+
 function testTheJS() {
     console.log('test');
 }
 
-'use strict';
 
 
 function showAndHideDropNav() {
-
     // Buttons
     let werknemersNavItem = document.getElementById("werknemersNavItem");
     let werkgeversNavItem = document.getElementById("werkgeversNavItem");
@@ -23,6 +23,7 @@ function showAndHideDropNav() {
     let customDropdownOnzeOrganisatie = document.getElementById("custom-dropdown-menu__onze-organisatie");
 
 
+
     // Activate triggerZone
     function activateTriggerZone() {
         triggerzone.classList.add("show");
@@ -30,6 +31,13 @@ function showAndHideDropNav() {
 
     function showDropdown() {
         customDropdownWerknemers.classList.add("show");
+    };
+
+    function hideDropdown() {
+        customDropdownWerknemers.classList.remove("show");
+        customDropdownWerkgevers.classList.remove("show");
+        customDropdownGepensioneerden.classList.remove("show");
+        customDropdownOnzeOrganisatie.classList.remove("show");
     };
 
     function hideTriggerZone() {
@@ -41,7 +49,10 @@ function showAndHideDropNav() {
         showDropdown();
         activateTriggerZone();
     });
-
+    werknemersNavItem.addEventListener('mouseout', function () {
+        console.log(`Werknemers`);
+        hideDropdown();
+    });
 
     werkgeversNavItem.addEventListener('mouseover', function () {
         console.log(`Werkgevers`);
@@ -49,16 +60,33 @@ function showAndHideDropNav() {
         activateTriggerZone();
     });
 
+    werkgeversNavItem.addEventListener('mouseout', function () {
+        console.log(`Werknemers`);
+        hideDropdown();
+    });
+
     gepensioneerdenNavItem.addEventListener('mouseover', function () {
         console.log(`Gepensioneerden`);
+        showDropdown();
         activateTriggerZone();
+    });
+
+    gepensioneerdenNavItem.addEventListener('mouseout', function () {
+        console.log(`Werknemers`);
+        hideDropdown();
     });
 
     onzeOrganisatieNavItem.addEventListener('mouseover', function () {
         console.log(`Onze Organisatie`);
+        showDropdown();
         activateTriggerZone();
     });
 
+
+    onzeOrganisatieNavItem.addEventListener('mouseout', function () {
+        console.log(`Werknemers`);
+        hideDropdown();
+    });
 }
 
 

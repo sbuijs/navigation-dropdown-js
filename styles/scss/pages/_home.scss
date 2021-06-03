@@ -22,6 +22,18 @@
     background-color: lightgrey;
     display: none;
 }
+
+.custom-dropdown-menu {
+    background-color: palegoldenrod;
+    height: 400px;
+    width: 100vw;
+}
+
+.dropdown-item {
+    &:hover {
+        background-color: transparent;
+    }
+}
 .custom-dropdown-menu-werknemers,
 .custom-dropdown-menu-werkgevers,
 .custom-dropdown-menu-gepensioneerden,
