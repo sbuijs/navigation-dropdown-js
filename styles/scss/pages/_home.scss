@@ -1,46 +1,55 @@
-.custom-menu-dropdown {
-    width: 100vw;
-    height: 200px;
-    display: none;
+.navbar {
+    z-index: 2;
+    background-color: white;
 }
 
-#custom-menu-dropdown-1 {
+.custom-dropdown-menu__container {
+    width: 100vw;
+    height: 40vh;
     background-color: lightblue;
 }
 
-#custom-menu-dropdown-2 {
-    background-color: lightcoral;
-}
+// .custom-dropdown-menu-werknemers,
+// .custom-dropdown-menu-werkgevers,
+// .custom-dropdown-menu-gepensioneerden,
+// .custom-dropdown-menu-onze-organisatie {
+//     position: absolute;
+//     z-index: 1;
+//     width: 100%;
+//     transform: translateY(-500px);
+//     transition: all 0.6s ease-in-out;
+//     &.show {
+//         display: block;
+//         transform: translateY(0px);
+//     }
+// }
 
-#custom-menu-dropdown-3 {
-    background-color: lightgoldenrodyellow;
-}
-
-.triggerzone {
-    width: 100vw;
-    height: 200px;
-    background-color: lightgrey;
-    display: none;
-}
-
-.custom-dropdown-menu {
-    background-color: palegoldenrod;
-    height: 400px;
-    width: 100vw;
-}
-
-.dropdown-item {
-    &:hover {
-        background-color: transparent;
-    }
-}
 .custom-dropdown-menu-werknemers,
 .custom-dropdown-menu-werkgevers,
 .custom-dropdown-menu-gepensioneerden,
 .custom-dropdown-menu-onze-organisatie {
-    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    transform: translateY(-500px);
+    transition: all 0.6s ease-in-out;
+    &.show {
+        display: block;
+    }
+    &.animate {
+        transform: translateY(0px);
+    }
 }
 
-.show {
-    display: block;
+.triggerzone {
+    background-color: lightcoral;
+    z-index: 10;
+    width: 100vw;
+    height: 200px;
+    display: none;
+    &.show {
+        display: block;
+        margin-top: 0px;
+        transform: translateY(300px);
+    }
 }
