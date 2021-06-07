@@ -151,9 +151,23 @@ function showAndHideDropNav() {
     }
 
     function showDropdown(dropdownName) {
-        dropdownName.classList.add("show");
-        dropdownName.classList.add("animate");
-    }
+        // console.log(dropdownName.classList.contains("show"));
+        // console.log(dropdownName);
+
+        if (dropdownIsVisible) {
+            dropdownName.classList.add("show");
+            dropdownName.classList.remove("animate");
+        } else {
+            dropdownName.classList.add("animate");
+        };
+
+        // if (dropdownName.classList.contains("show") != true) {
+        //     dropdownName.classList.add("animate");
+        // } else if (dropdownName.classList.contains("animate")) {
+        //     dropdownName.classList.remove("animate");
+        //     dropdownName.classList.add("show");
+        // };
+    };
 
     function activateTriggerzone() {
         triggerzone.classList.add("show");

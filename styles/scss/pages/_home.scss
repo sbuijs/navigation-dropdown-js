@@ -31,14 +31,18 @@
     position: absolute;
     z-index: 1;
     width: 100%;
-    display: none;
-    transition: all 1s ease-in;
+    // display: none;
     transform: translateY(-500px);
+
     &.show {
-        display: block;
+        // display: block;
+        transform: translateY(0px);
     }
     &.animate {
+        transition: all 1s ease-in;
+        // display: block;
         transform: translateY(0px);
+        border: 1px solid green;
     }
 }
 

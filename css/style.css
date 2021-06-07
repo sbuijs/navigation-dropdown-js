@@ -40,19 +40,19 @@ body {
   position: absolute;
   z-index: 1;
   width: 100%;
-  display: none;
-  transition: all 1s ease-in;
   transform: translateY(-500px); }
   .custom-dropdown-menu-werknemers.show,
   .custom-dropdown-menu-werkgevers.show,
   .custom-dropdown-menu-gepensioneerden.show,
   .custom-dropdown-menu-onze-organisatie.show {
-    display: block; }
+    transform: translateY(0px); }
   .custom-dropdown-menu-werknemers.animate,
   .custom-dropdown-menu-werkgevers.animate,
   .custom-dropdown-menu-gepensioneerden.animate,
   .custom-dropdown-menu-onze-organisatie.animate {
-    transform: translateY(0px); }
+    transition: all 1s ease-in;
+    transform: translateY(0px);
+    border: 1px solid green; }
 
 .custom-dropdown-menu-werknemers {
   background-color: palegoldenrod; }
