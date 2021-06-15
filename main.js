@@ -71,6 +71,17 @@ function showAndHideDropNav() {
         customDropdownGepensioneerden.classList.add("animate-up");
         customDropdownOnzeOrganisatie.classList.add("animate-up");
 
+
+        //delay the removal of the animate-up class, so that it has time to move up
+        var delayInMilliseconds = 1100; //1,1 second
+        setTimeout(function () {
+            customDropdownWerknemers.classList.remove("animate-up");
+            customDropdownWerkgevers.classList.remove("animate-up");
+            customDropdownGepensioneerden.classList.remove("animate-up");
+            customDropdownOnzeOrganisatie.classList.remove("animate-up");
+
+        }, delayInMilliseconds);
+
         console.log(`animated up`);
     };
 
