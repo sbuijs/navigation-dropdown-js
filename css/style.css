@@ -46,13 +46,18 @@ body {
   .custom-dropdown-menu-gepensioneerden.show,
   .custom-dropdown-menu-onze-organisatie.show {
     transform: translateY(0px); }
-  .custom-dropdown-menu-werknemers.animate,
-  .custom-dropdown-menu-werkgevers.animate,
-  .custom-dropdown-menu-gepensioneerden.animate,
-  .custom-dropdown-menu-onze-organisatie.animate {
+  .custom-dropdown-menu-werknemers.animate-down,
+  .custom-dropdown-menu-werkgevers.animate-down,
+  .custom-dropdown-menu-gepensioneerden.animate-down,
+  .custom-dropdown-menu-onze-organisatie.animate-down {
     transition: all 1s ease-in;
-    transform: translateY(0px);
-    border: 1px solid green; }
+    transform: translateY(0px); }
+  .custom-dropdown-menu-werknemers.animate-up,
+  .custom-dropdown-menu-werkgevers.animate-up,
+  .custom-dropdown-menu-gepensioneerden.animate-up,
+  .custom-dropdown-menu-onze-organisatie.animate-up {
+    transition: all 1s ease-in;
+    transform: translateY(-500px); }
 
 .custom-dropdown-menu-werknemers {
   background-color: palegoldenrod; }

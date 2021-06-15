@@ -23,7 +23,7 @@ function showAndHideDropNav() {
 
     // let dropdownName;
     let dropdownIsVisible = false;
-    console.log(dropdownIsVisible);
+    console.log(`Dropdown is visible ${dropdownIsVisible}`);
 
     let dropdownName;
 
@@ -32,7 +32,7 @@ function showAndHideDropNav() {
         customDropdownWerknemers.classList.remove("show");
         customDropdownGepensioneerden.classList.remove("show");
         customDropdownOnzeOrganisatie.classList.remove("show");
-        console.log(`Close all dropdowns`);
+        // console.log(`Close all dropdowns`);
     };
 
     function resetDropdowns() {
@@ -40,25 +40,40 @@ function showAndHideDropNav() {
         customDropdownWerknemers.classList.remove("show");
         customDropdownGepensioneerden.classList.remove("show");
         customDropdownOnzeOrganisatie.classList.remove("show");
-        customDropdownWerkgevers.classList.remove("animate");
-        customDropdownWerknemers.classList.remove("animate");
-        customDropdownGepensioneerden.classList.remove("animate");
-        customDropdownOnzeOrganisatie.classList.remove("animate");
+        customDropdownWerkgevers.classList.remove("animate-down");
+        customDropdownWerknemers.classList.remove("animate-down");
+        customDropdownGepensioneerden.classList.remove("animate-down");
+        customDropdownOnzeOrganisatie.classList.remove("animate-down");
         triggerzone.classList.remove("show");
         dropdownIsVisible = false;
-        console.log(`completed reset`);
+        // console.log(`completed reset`);
     }
 
     function showDropdown(dropdownName) {
         if (dropdownIsVisible) {
             dropdownName.classList.add("show");
-            dropdownName.classList.remove("animate");
-            console.log(`showDropdown IF`);
+            dropdownName.classList.remove("animate-down");
+            // console.log(`showDropdown IF`);
         } else {
-            dropdownName.classList.add("animate");
-            console.log(`showDropdown Else`);
+            dropdownName.classList.add("animate-down");
+            // console.log(`showDropdown Else`);
         };
     };
+
+    function animateUp() {
+        customDropdownWerknemers.classList.remove("animate-down");
+        customDropdownWerkgevers.classList.remove("animate-down");
+        customDropdownGepensioneerden.classList.remove("animate-down");
+        customDropdownOnzeOrganisatie.classList.remove("animate-down");
+
+        customDropdownWerknemers.classList.add("animate-up");
+        customDropdownWerkgevers.classList.add("animate-up");
+        customDropdownGepensioneerden.classList.add("animate-up");
+        customDropdownOnzeOrganisatie.classList.add("animate-up");
+
+        console.log(`animated up`);
+    };
+
 
     function activateTriggerzone() {
         triggerzone.classList.add("show");
@@ -101,7 +116,9 @@ function showAndHideDropNav() {
 
 
     triggerzone.addEventListener('mouseover', function () {
+        animateUp();
         resetDropdowns();
+        console.log(`triggerzone hit`);
     });
 
 };

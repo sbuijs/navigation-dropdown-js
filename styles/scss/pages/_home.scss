@@ -6,23 +6,7 @@
 .custom-dropdown-menu__container {
     width: 100vw;
     height: 40vh;
-    // background-color: lightblue;
 }
-
-// .custom-dropdown-menu-werknemers,
-// .custom-dropdown-menu-werkgevers,
-// .custom-dropdown-menu-gepensioneerden,
-// .custom-dropdown-menu-onze-organisatie {
-//     position: absolute;
-//     z-index: 1;
-//     width: 100%;
-//     transform: translateY(-500px);
-//     transition: all 0.6s ease-in-out;
-//     &.show {
-//         display: block;
-//         transform: translateY(0px);
-//     }
-// }
 
 .custom-dropdown-menu-werknemers,
 .custom-dropdown-menu-werkgevers,
@@ -31,18 +15,18 @@
     position: absolute;
     z-index: 1;
     width: 100%;
-    // display: none;
     transform: translateY(-500px);
 
     &.show {
-        // display: block;
         transform: translateY(0px);
     }
-    &.animate {
+    &.animate-down {
         transition: all 1s ease-in;
-        // display: block;
         transform: translateY(0px);
-        border: 1px solid green;
+    }
+    &.animate-up {
+        transition: all 1s ease-in;
+        transform: translateY(-500px);
     }
 }
 
