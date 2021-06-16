@@ -40,7 +40,7 @@ body {
   position: absolute;
   z-index: 1;
   width: 100%;
-  transform: translateY(-500px); }
+  transform: translateY(-350px); }
   .custom-dropdown-menu-werknemers.show,
   .custom-dropdown-menu-werkgevers.show,
   .custom-dropdown-menu-gepensioneerden.show,
@@ -50,13 +50,13 @@ body {
   .custom-dropdown-menu-werkgevers.animate-down,
   .custom-dropdown-menu-gepensioneerden.animate-down,
   .custom-dropdown-menu-onze-organisatie.animate-down {
-    transition: all 1s ease-in;
+    transition: all 0.7s cubic-bezier(0.2, 0.3, 0.25, 0.9);
     transform: translateY(0px); }
   .custom-dropdown-menu-werknemers.animate-up,
   .custom-dropdown-menu-werkgevers.animate-up,
   .custom-dropdown-menu-gepensioneerden.animate-up,
   .custom-dropdown-menu-onze-organisatie.animate-up {
-    transition: all 1s ease-in;
+    transition: all 0.5s cubic-bezier(0.9, 0.25, 0.3, 0.2);
     transform: translateY(-500px); }
 
 .custom-dropdown-menu-werknemers {

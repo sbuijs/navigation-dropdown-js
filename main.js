@@ -28,8 +28,8 @@ function showAndHideDropNav() {
     let dropdownName;
 
     function closeAllDropdowns() {
-        customDropdownWerkgevers.classList.remove("show");
         customDropdownWerknemers.classList.remove("show");
+        customDropdownWerkgevers.classList.remove("show");
         customDropdownGepensioneerden.classList.remove("show");
         customDropdownOnzeOrganisatie.classList.remove("show");
         // console.log(`Close all dropdowns`);
@@ -81,6 +81,9 @@ function showAndHideDropNav() {
             customDropdownOnzeOrganisatie.classList.remove("animate-up");
 
         }, delayInMilliseconds);
+
+        //transition end 
+        //custom dropdown listener transition end, funcion in
 
         console.log(`animated up`);
     };
@@ -134,7 +137,7 @@ function showAndHideDropNav() {
 
 };
 
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function () {
     testTheJS();
     showAndHideDropNav();
 });

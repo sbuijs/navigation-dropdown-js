@@ -15,17 +15,17 @@
     position: absolute;
     z-index: 1;
     width: 100%;
-    transform: translateY(-500px);
+    transform: translateY(-350px);
 
     &.show {
         transform: translateY(0px);
     }
     &.animate-down {
-        transition: all 1s ease-in;
+        transition: all 0.7s cubic-bezier(0.2, 0.3, 0.25, 0.9);
         transform: translateY(0px);
     }
     &.animate-up {
-        transition: all 1s ease-in;
+        transition: all 0.5s cubic-bezier(0.9, 0.25, 0.3, 0.2);
         transform: translateY(-500px);
     }
 }
