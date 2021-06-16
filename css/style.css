@@ -40,7 +40,7 @@ body {
   position: absolute;
   z-index: 1;
   width: 100%;
-  transform: translateY(-350px); }
+  transform: translateY(-420px); }
   .custom-dropdown-menu-werknemers.show,
   .custom-dropdown-menu-werkgevers.show,
   .custom-dropdown-menu-gepensioneerden.show,

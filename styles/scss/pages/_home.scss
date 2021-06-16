@@ -15,7 +15,8 @@
     position: absolute;
     z-index: 1;
     width: 100%;
-    transform: translateY(-350px);
+
+    transform: translateY(-420px);
 
     &.show {
         transform: translateY(0px);
