@@ -2,26 +2,29 @@
 
 
 function showAndHideDropNav() {
-    // Buttons
+    // variables of the navigation buttons
     let werknemersNavItem = document.getElementById("werknemersNavItem");
     let werkgeversNavItem = document.getElementById("werkgeversNavItem");
     let gepensioneerdenNavItem = document.getElementById("gepensioneerdenNavItem");
     let onzeOrganisatieNavItem = document.getElementById("onzeOrganisatieNavItem");
 
-    // Triggerzone
+    // varible of the trigger zone that helps with closing the dropdowns
     let triggerzone = document.querySelector(".triggerzone");
 
-    // Dropdowns
+    // variables of the dropdowns
     let customDropdownWerknemers = document.getElementById("custom-dropdown-menu__werknemers");
     let customDropdownWerkgevers = document.getElementById("custom-dropdown-menu__werkgevers");
     let customDropdownGepensioneerden = document.getElementById("custom-dropdown-menu__gepensioneerden");
     let customDropdownOnzeOrganisatie = document.getElementById("custom-dropdown-menu__onze-organisatie");
 
+    //variable of the state of the dropdown
     let isDropdownVisible = false;
+
+    //variable that holds the name of the current dropdown
     let dropdownName;
 
 
-    //function removes all show classes
+    //function that removes all show classes for all the custom dropdowns
     function removeAllShowClasses() {
         customDropdownWerknemers.classList.remove("show");
         customDropdownWerkgevers.classList.remove("show");
@@ -31,8 +34,8 @@ function showAndHideDropNav() {
     };
 
 
-
-    function animateup() {
+    //Function that animates the dropdown up by replacing the animate-down with the animate up class
+    function animateUp() {
         customDropdownWerknemers.classList.remove("animate-down");
         customDropdownWerkgevers.classList.remove("animate-down");
         customDropdownGepensioneerden.classList.remove("animate-down");
@@ -42,15 +45,9 @@ function showAndHideDropNav() {
         customDropdownGepensioneerden.classList.add("animate-up");
         customDropdownOnzeOrganisatie.classList.add("animate-up");
     }
-    //function removes all animate classes
-    function animateDown() {
-        customDropdownWerknemers.classList.add("animate-down");
-        customDropdownWerkgevers.classList.add("animate-down");
-        customDropdownGepensioneerden.classList.add("animate-down");
-        customDropdownOnzeOrganisatie.classList.add("animate-down");
-    };
 
 
+    // function that removes all the animate-up and animate-down classes
     function removeAllAnimateClasses() {
         customDropdownWerknemers.classList.remove("animate-up");
         customDropdownWerkgevers.classList.remove("animate-up");
@@ -66,7 +63,7 @@ function showAndHideDropNav() {
     function resetDropdowns() {
         removeAllShowClasses();
         removeAllAnimateClasses();
-        animateup();
+        animateUp();
         triggerzone.classList.remove("show");
         isDropdownVisible = false;
     };
@@ -83,44 +80,46 @@ function showAndHideDropNav() {
         };
     };
 
+    //function that adds a triggerzone underneath the dropdown that functions as a hover-to-close-dropdown-area
     function activateTriggerzone() {
         triggerzone.classList.add("show");
         console.log(`Activate triggerzone`);
     };
 
-
-    function doYourThing(dropdownName) {
+    //Function that calls all the functions that are needed to show the dropdown and animate if necessary
+    function showTheDropdown(dropdownName) {
         removeAllAnimateClasses();
         removeAllShowClasses();
         activateTriggerzone();
         showDropdown(dropdownName);
         isDropdownVisible = true;
-    }
+    };
 
-
+    //when the user hovers an item the showdropdown function is called
     werknemersNavItem.addEventListener('mouseover', function () {
         dropdownName = customDropdownWerknemers;
-        doYourThing(dropdownName);
+        showTheDropdown(dropdownName);
     });
 
     werkgeversNavItem.addEventListener('mouseover', function () {
         dropdownName = customDropdownWerkgevers;
-        doYourThing(dropdownName);
+        showTheDropdown(dropdownName);
     });
 
 
     gepensioneerdenNavItem.addEventListener('mouseover', function () {
         dropdownName = customDropdownGepensioneerden;
-        doYourThing(dropdownName);
+        showTheDropdown(dropdownName);
     });
 
 
     onzeOrganisatieNavItem.addEventListener('mouseover', function () {
         dropdownName = customDropdownOnzeOrganisatie;
-        doYourThing(dropdownName);
+        showTheDropdown(dropdownName);
     });
 
 
+    //when the user hovers over the trigger zone it will reset all the dropdowns and animate it to closed state
     triggerzone.addEventListener('mouseover', function () {
         resetDropdowns();
         console.log(`triggerzone hit`);
