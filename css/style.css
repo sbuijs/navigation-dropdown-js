@@ -25,31 +25,58 @@ body {
   #custom-dropdown-menu.show {
     display: block; }
 
-.custom-menu-dropdown {
+.navbar {
+  z-index: 2;
+  background-color: white; }
+
+.custom-dropdown-menu__container {
   width: 100vw;
-  height: 200px;
-  display: none; }
-
-#custom-menu-dropdown-1 {
-  background-color: lightblue; }
-
-#custom-menu-dropdown-2 {
-  background-color: lightcoral; }
-
-#custom-menu-dropdown-3 {
-  background-color: lightgoldenrodyellow; }
-
-.triggerzone {
-  width: 100vw;
-  height: 200px;
-  background-color: lightgrey;
-  display: none; }
+  height: 40vh; }
 
 .custom-dropdown-menu-werknemers,
 .custom-dropdown-menu-werkgevers,
 .custom-dropdown-menu-gepensioneerden,
 .custom-dropdown-menu-onze-organisatie {
-  display: none; }
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  transform: translateY(-420px); }
+  .custom-dropdown-menu-werknemers.show,
+  .custom-dropdown-menu-werkgevers.show,
+  .custom-dropdown-menu-gepensioneerden.show,
+  .custom-dropdown-menu-onze-organisatie.show {
+    transform: translateY(0px); }
+  .custom-dropdown-menu-werknemers.animate-down,
+  .custom-dropdown-menu-werkgevers.animate-down,
+  .custom-dropdown-menu-gepensioneerden.animate-down,
+  .custom-dropdown-menu-onze-organisatie.animate-down {
+    transition: all 0.7s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+    transform: translateY(0px); }
+  .custom-dropdown-menu-werknemers.animate-up,
+  .custom-dropdown-menu-werkgevers.animate-up,
+  .custom-dropdown-menu-gepensioneerden.animate-up,
+  .custom-dropdown-menu-onze-organisatie.animate-up {
+    transition: all 0.5s cubic-bezier(0.9, 0.25, 0.3, 0.2);
+    transform: translateY(-500px); }
 
-.show {
-  display: block; }
+.custom-dropdown-menu-werknemers {
+  background-color: palegoldenrod; }
+
+.custom-dropdown-menu-werkgevers {
+  background-color: palegreen; }
+
+.custom-dropdown-menu-gepensioneerden {
+  background-color: peachpuff; }
+
+.custom-dropdown-menu-onze-organisatie {
+  background-color: plum; }
+
+.triggerzone {
+  z-index: 10;
+  width: 100vw;
+  height: 200px;
+  display: none; }
+  .triggerzone.show {
+    display: block;
+    margin-top: 0px;
+    transform: translateY(300px); }
