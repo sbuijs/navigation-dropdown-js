@@ -10,7 +10,8 @@
 <br/>
 <br/>
 
-<img width="1552" alt="simple-guessing-game" src="https://user-images.githubusercontent.com/1607627/165161199-55d1c5bd-8ce8-4287-8c11-8f24d87e1366.png">
+<img width="1552" alt="Screenshot 2022-04-27 at 14 30 35" src="https://user-images.githubusercontent.com/1607627/165518357-1126b334-3bb1-478a-a8a7-4e678c461972.png">
+
 
 ## Built With
 - Vanilla Javascript
